@@ -41,7 +41,7 @@ class SinglyLinkedList {
     this.tail = newTail;
     this.length--;
     this.tail.next = null;
-    console.log(newTail);
+
     if (this.length === 0) {
       this.head = 0;
       this.tail = 0;
@@ -104,17 +104,60 @@ class SinglyLinkedList {
 
   // we will add the new value to the given index and shift the following linked list ahead
   insert(index, value) {
-    if (index < 0 || index > this.length) return null;
-    if (index === this.length) this.push(value);
-    if (index === 0) this.unshift(value);
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(value);
+    if (index === 0) return !!this.unshift(value);
 
-    let previousNode = this.get(value - 1);
     let newNode = new Node(value);
-    // newNode.next =
-    previousNode.next = newNode;
+    let nextNode = this.get(index);
+    let previousNode = this.get(value - 1);
 
-    let counter = 0;
-    while (index < counter) {}
+    previousNode.next = newNode;
+    newNode.next = nextNode;
+    this.length++;
+    return true;
+  }
+
+  // Removes an item from the list for given index and patches the remaning list
+  remove(index) {
+    if (index < 0 || index.length > this.length) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    let previousNode = this.get(index - 1);
+    let removedNode = previousNode.next;
+    previousNode.next = removedNode.next;
+    this.length--;
+    return removedNode;
+  }
+
+  // Reversing linked list in place, we wont make any copy
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next;
+    let prev = null;
+
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+
+    return this;
+  }
+
+  print() {
+    let array = [];
+    let current = this.head;
+    while (current) {
+      array.push(current.value);
+      current = current.next;
+    }
+
+    console.log(array);
   }
 }
 
@@ -123,6 +166,10 @@ let linkedList = new SinglyLinkedList();
 linkedList.push(5);
 linkedList.push(10);
 linkedList.push(15);
+linkedList.push(20);
+linkedList.push(25);
 
 // console.log(linkedList.pop(), linkedList.length);
-linkedList.set(1, 1);
+linkedList.remove(1);
+// console.log(linkedList);
+console.log(linkedList.print());

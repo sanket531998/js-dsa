@@ -1,0 +1,21 @@
+Doubly linked lists 
+
+In this we add a pointer to the previous and next node 
+Almost identical to singly linked lists, except every node has another pointer, to the previous node 
+in singly linked lists we only point to the following node here we also point to the previous node 
+
+Comparison with singly linked lists 
+more memory === more flexibility ; is it a tradeoff
+
+node 
+-value
+-next
+-previous 
+
+doublyLinkedList 
+-head 
+-tail 
+-length 
+
+
+pop: we can go to the tail and get previous item and just remove it rather than starting from the first node 

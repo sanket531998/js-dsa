@@ -1,0 +1,31 @@
+Stacks 
+What: 
+1. Abstract ds, collection of data  
+2. LIFO : last in first out 
+3. More than 1 way to implement stack, we can also use linked list , array
+
+Use cases:
+1. managing function invocations 
+2. undo and redo functionality 
+3. Routinnh (the history object) is treated like a stack 
+
+Implementation:
+1. ARRAY ==> Easiest way is to use an array 
+    if we use push and pop methods only we can make a stack 
+    using other methods on the array will not obey stack rules 
+    a) push/pop
+    b) unshift/shift - (add at the start/remove from start)
+
+  We remember from the beginning adding to the start annd removing from the start 
+  is not a good thing as far as big O notation time complexity 
+
+  If you care about efficiency then you should not use array for stack 
+  Especially unshift and shift 
+  push/pop >>>>> unshift/shift
+
+2. LINKED LIST
+
+
+some languages come with their own stack implmentations, but JS does not 
+
+Queues 

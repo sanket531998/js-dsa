@@ -3,11 +3,12 @@ What:
 1. Abstract ds, collection of data  
 2. LIFO : last in first out 
 3. More than 1 way to implement stack, we can also use linked list , array
+4. not a built in JS DS 
 
 Use cases:
 1. managing function invocations 
 2. undo and redo functionality 
-3. Routinnh (the history object) is treated like a stack 
+3. Routing (the history object) is treated like a stack 
 
 Implementation:
 1. ARRAY ==> Easiest way is to use an array 
@@ -21,10 +22,21 @@ Implementation:
 
   If you care about efficiency then you should not use array for stack 
   Especially unshift and shift 
-  push/pop >>>>> unshift/shift
+  push/pop >>>>> unshift/shift   ==> time complexity 
 
-2. LINKED LIST
+We will use some other alogrithms which will use stacks and Queues
 
+2. SINGLY LINKED LIST  
+
+
+Big O of stacks 
+1. Insertion: O(1)
+2. Removal: O(1)
+3. Searching: O(N)
+4. Access: O(N)
+
+Stacks matter a lot for insertion and removal, but for searching and access we have 
+other DSs like arrays or ssome other DSs
 
 some languages come with their own stack implmentations, but JS does not 
 

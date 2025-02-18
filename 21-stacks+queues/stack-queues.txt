@@ -1,4 +1,4 @@
-Stacks 
+STACKS
 What: 
 1. Abstract ds, collection of data  
 2. LIFO : last in first out 
@@ -26,10 +26,20 @@ Implementation:
 
 We will use some other alogrithms which will use stacks and Queues
 
+
 2. SINGLY LINKED LIST  
+IMP: We can use singly linked list for stack, right?
+NOO: because when we use pop method of the singly linked list it is not constant time 
+because we traverse from the start to the end and this is not constant time  
+BUT Stack requires pop to be constant time 
+
+So instead it is much better to use shift and unshift, except just name them push and pop
 
 
 Big O of stacks 
+
+Pusing and poping are both constant time
+
 1. Insertion: O(1)
 2. Removal: O(1)
 3. Searching: O(N)
@@ -40,4 +50,70 @@ other DSs like arrays or ssome other DSs
 
 some languages come with their own stack implmentations, but JS does not 
 
-Queues 
+QUEUES 
+
+1. Define Queues
+2. Understand usecases
+3. Implement operations on a queue DS
+
+
+What is a queue?
+
+Similar to stack, 2 main things which we do are 
+a. Add data 
+b. Remove data
+
+Queue is a FIFO
+
+
+Where do we use it 
+a. Background tasks 
+b. Waiting lists in game 
+c. Uploading resources
+d. Printing tasks 
+
+We can implement queues with 
+1. Queue class 
+2. arrays 
+
+there are many ways we can create a queue but the only thing which we have to be 
+aware of is that it is FIFO 
+
+Queues with arrays  : WRONG way 
+1. we can pick either adding to the beggining or to the end 
+2. WE have to remove 1 first then 2 and then 3
+3. So we cannot use pop
+4. We use shift
+
+CORRECT WAY
+if we have 10000 items then removing from the begginng means that every single item is 
+reindexed so adding to the end of array doesnt require reindexing 
+SO WE WILL ADD TO THE BEGGINING AND REMOVE FROM LAST 
+
+ADD : unshift - adds at the start 
+REMOVE : pop - removes from last 
+
+push+shift VS unshift+pop 
+
+in both we have a drawback 
+1. in first push will push at end but shift we remove from start (indexing issue)
+2. in second unshift will add at start (indexing issue) and pop will remove from end (no issue)
+
+
+SO ideally it makes more sense to just create our own class for queue 
+
+2. Linked list based queue 
+
+a. Add: start | Remove: end
+b. Add: end - enqueue(push) | Remove: start - dequeue(shift)   -> Correct 
+ 
+removing from the end in singly linked lists is slow 
+
+so we will add to the end and remove from the beginning 
+
+BIG O of queue 
+
+Insertion: O(1)
+Removal: O(1)
+Searching: O(n)
+Access: O(n)

@@ -80,3 +80,24 @@ Why do we order them?
 2. Also it makes easy to insert things 
 
 Searching becomes very quick in a BST compared to an unsorted tree 
+If the input value is equal to the current value, it is upto the logic todo
+Whatever you want to do with the duplicate
+We can also keep a frequency counter to keep track of the duplicates
+
+
+
+FINDING a node in a BST 
+Steps 
+1. Start at the root, check 
+2. 
+
+
+BIG O of Binary search trees 
+1. Insertion - O(log n)  base 2
+2. Searching - O(log n)
+This is a good time complexity 
+even if we double the number of nodes the search counter increases only by 1 
+
+*** But his time complexity is not guaranteed 
+
+ex: if we have all the nodes on one side the time complxity will become O(n)

@@ -21,22 +21,74 @@ class BinarySearchTree {
       let current = this.root;
 
       while (true) {
+        if (value === this.current) {
+          console.log("Duplicate value found");
+          return false;
+        }
         if (value < current.value) {
           if (current.left === null) {
             current.left = newNode;
             return this;
-          } else {
-            current = current.left;
           }
+          current = current.left;
         } else if (value > current.value) {
           if (current.right === null) {
             current.right = newNode;
             return this;
-          } else {
-            current = current.right;
           }
+          current = current.right;
         }
       }
+    }
+  }
+
+  myFind(value) {
+    let current = this.root;
+
+    if (!current) return false;
+
+    while (true) {
+      if (value === current.value) return true;
+      else if (value < current.value) {
+        if (current.left === null) return false;
+
+        current = current.left;
+      } else if (value > current.value) {
+        if (current.right === null) return false;
+
+        current = current.right;
+      }
+    }
+  }
+
+  gptFind(value) {
+    let current = this.root;
+
+    while (current) {
+      // No need for an extra check at the start
+      if (value === current.value) return true;
+      else if (value < current.value) current = current.left;
+      else current = current.right;
+    }
+
+    return false; // If we exit the loop, the value wasn't found
+  }
+
+  udemyFind(value) {
+    if (this.root === null) return false;
+    let current = this.root;
+    let found = false;
+
+    while (current && !found) {
+      if (value < current.value) {
+        current = current.left;
+      } else if (value > current.right) {
+        current = current.right;
+      } else {
+        found = true;
+      }
+      if (!found) return undefined;
+      return current;
     }
   }
 }
@@ -48,7 +100,7 @@ tree.insert(10);
 tree.insert(20);
 tree.insert(40);
 
-console.log(tree);
+console.log(tree.udemyFind(30));
 
 // NAIVE APPROACH
 // tree.root = new Node(10);

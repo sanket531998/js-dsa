@@ -1,0 +1,40 @@
+There can be any tree not just binary tree   
+a. Binary search tree 
+b. Plain binary tree 
+c. Terniary tree 
+
+If it is a random tree, we have to visit all the nodes to find out the particular node 
+
+BUT WE HAVE TO VISIT EVERY NODE ONCE 
+
+Traversing a tree, 2 main approaches 
+1. BREADTH-FIRST SEARCH 
+2. DEPTH-FIRST SEARCH 
+
+Breadth first search, basically searching in horizontal way 
+
+Depth first search has 3 things
+Idea being: going down 
+
+DFS - Inorder
+DFS - Preorder 
+DFS - Postorder 
+
+
+BFS intro  
+        10
+      6    15
+    3   8    20
+
+[10, 6, 15, 3, 8, 20] 
+
+BFS means we will visit every node on the same level the go to the next line 
+IMPLEMETING BFS 
+1. Create a queue (this can be an array) and a variable to store the values of nodes 
+   visited 
+   When we are using the queue approach the end goal is to return this 
+   [10, 6, 15, 3, 8, 20] 
+
+
+queue: To help us keep track of things - this is just to help us out 
+List of data to return at the end 

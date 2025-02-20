@@ -1,0 +1,82 @@
+1. what is a tree
+2. compare and constrast trees and lists 
+3. Explaing the differences between 
+  a. trees, 
+  b. binary trees and 
+  c. binary search trees (BST)
+4. Implement operations on binary search trees 
+
+Tree 
+A DS that consists of node in a parent child relationship 
+
+each node can point to more than one node 
+1 top node : Root 
+
+
+LISTS: Linear
+TREES: Non-linear 
+
+A singly linked list is a very special case of a tree 
+
+RULES for a tree
+1. A node can only point to a child. We cannot point to nodes on same level
+   We cannot have a node pointing to a parent or a sibling 
+2. We can have only 1 root 
+
+Terminology 
+1. Root 
+2. Child 
+3. Parent 
+4. Sibling
+5. Leaf - A node with no children 
+6. Edge - The connection between one node and another 
+
+
+USES FOR TREES 
+1. HTML DOM 
+2. Network routing - how a message is transmitted to multiple nodes 
+3. Abstract syntax tree - Used to describe the syntax of a programming language using a tree
+4. AI and ML 
+5. Folders in operating system 
+6. JSON 
+
+
+Kinds of trees
+
+1. Binary trees
+2. B trees
+3. Heaps 
+
+We will focus on binary trees and even more specifically binary search trees 
+in this section and they excel at searching 
+
+A normal tree can have n number of childrens 
+But a binary tree can have at most 2 children, 
+if any node has 3 nodes - NOT A BINARY TREE  
+
+we can also have terniary trees - 3 nodes 
+
+Binary search trees (BST) have special properties 
+1. Each node can have at most 2 nodes per node (0, 1 or 2)
+2. And they are sorted in a particular way 
+   And the pattern is 
+   a. Every node to the left of a parent node is always less than the parent 
+   b. Every node to the right of the parent node is always greater than the parent
+
+
+BST are used to store data that can be compared, that is sortable 
+
+        10
+    6       15
+  3   8        20
+
+Left node has smaller numbers 
+and right nodes have greater numbers 
+
+
+SEARCHING THE BINARY TREE
+Why do we order them?
+1. Makes it easy and fast to look things up 
+2. Also it makes easy to insert things 
+
+Searching becomes very quick in a BST compared to an unsorted tree 

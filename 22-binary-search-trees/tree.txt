@@ -65,14 +65,12 @@ Binary search trees (BST) have special properties
 
 
 BST are used to store data that can be compared, that is sortable 
-
         10
     6       15
   3   8        20
 
 Left node has smaller numbers 
 and right nodes have greater numbers 
-
 
 SEARCHING THE BINARY TREE
 Why do we order them?

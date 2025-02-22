@@ -1,0 +1,37 @@
+Heaps are another category of trees 
+So everything that applies to trees applies to heaps as well but there are 
+additional considerations and rules 
+
+There are many types among heaps 
+
+We are focusing on binary heaps and in that there are 2 types 
+1. Min heaps 
+2. Max heaps 
+
+Objectives
+1. Define a heap 
+2. Compare min and max heaps 
+3. Implement basic methods on heaps 
+4. Where heaps are used in real world and what other DS can be constructed 
+   from heaps 
+
+
+1] What is a binary heap
+
+    Heap is a tress structure, very similar to binary search tree, but with some 
+    different rules
+    In a MaxBinaryHeap, parent: larger than child nodes
+    In a MinBinaryHeap, parent: smaller than child nodes 
+    So just like the binary search tree, each node can have at most 2 children
+    But unlike the binary search tree there is no order between left n right 
+
+  a] Max Binary Heap 
+     1. each parent has at most 2 child nodes
+     2. the value of each parent node is always greater than its child node
+     3. in a max binary heap the parent is greater than the children, but there are
+        no guarantees between the siblings nodes 
+     4. a binary heap is as compact as possible. all the children of each nodes are as 
+        full as they can be and left children are filled out first 
+
+Usage of binary heaps 
+a. Prioroty queues - very commonly used DS 

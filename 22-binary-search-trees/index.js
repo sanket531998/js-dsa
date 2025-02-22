@@ -91,16 +91,84 @@ class BinarySearchTree {
       return current;
     }
   }
+
+  // Tree traversal
+  // Breadth first search
+  BFS() {
+    var node = this.root,
+      data = [],
+      queue = [];
+    queue.push(node);
+
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.value);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return data;
+  }
+
+  // Depth first search
+  // 1. Pre-order
+  DFSPreOrder() {
+    let data = [],
+      current = this.root;
+
+    function traverse(node) {
+      data.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+    return data;
+  }
+
+  // 2. Post-order
+  DFSPostOrder() {
+    let data = [],
+      current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.value);
+    }
+    traverse(current);
+    return data;
+  }
+
+  // 3. In-order
+  DFSInOrder() {
+    let data = [],
+      current = this.root;
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.value);
+      if (node.right) traverse(node.right);
+    }
+    traverse(current);
+    return data;
+  }
 }
 
 let tree = new BinarySearchTree();
 
 tree.insert(30);
 tree.insert(10);
+tree.insert(50);
 tree.insert(20);
 tree.insert(40);
+tree.insert(5);
 
-console.log(tree.udemyFind(30));
+console.log(tree.DFSInOrder());
+
+//        30
+//  10         50
+//5    20  40
+
+// console.log(tree.udemyFind(30));
 
 // NAIVE APPROACH
 // tree.root = new Node(10);

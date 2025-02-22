@@ -16,10 +16,9 @@ Breadth first search, basically searching in horizontal way
 Depth first search has 3 things
 Idea being: going down 
 
-DFS - Inorder
-DFS - Preorder 
-DFS - Postorder 
-
+1. DFS - Inorder
+2. DFS - Preorder 
+3. DFS - Postorder 
 
 BFS intro  
         10
@@ -38,3 +37,42 @@ IMPLEMETING BFS
 
 queue: To help us keep track of things - this is just to help us out 
 List of data to return at the end 
+
+In JS empty array is truthy 
+
+
+1] DFS - PRE-ORDER
+    1. We visit the root node first 
+    2. Then we visit the left
+    3. Then we visit the right 
+
+        10
+      6    15
+    3   8    20
+
+[10, 6, 3, 8, 15, 20] 
+
+
+2] DFS - POST-ORDER
+    1. First we vist the left
+    2. Then we visit the right 
+    3. Then we visit the root 
+
+        10
+      6    15
+    3   8    20
+
+[3, 8, 6, 20, 15, 10] 
+
+
+3] DFS - IN-ORDER 
+    1. First we vist the left
+    2. Then we visit the root 
+    3. Then we visit the right 
+
+
+         10
+      6    15
+    3   8    20
+
+[3, 6, 8, 10, 15, 20 ] 

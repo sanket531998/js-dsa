@@ -69,8 +69,7 @@ BST are used to store data that can be compared, that is sortable
     6       15
   3   8        20
 
-Left node has smaller numbers 
-and right nodes have greater numbers 
+Left node has smaller numbers and right nodes have greater numbers 
 
 SEARCHING THE BINARY TREE
 Why do we order them?
@@ -78,7 +77,7 @@ Why do we order them?
 2. Also it makes easy to insert things 
 
 Searching becomes very quick in a BST compared to an unsorted tree 
-If the input value is equal to the current value, it is upto the logic todo
+If the input value is equal to the current value, it is upto the logic you have
 Whatever you want to do with the duplicate
 We can also keep a frequency counter to keep track of the duplicates
 

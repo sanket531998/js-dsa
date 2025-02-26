@@ -1,0 +1,23 @@
+Objectives
+1. What are the drawbacks of first 3 sorts 
+2. We will learn 3 more sorts
+    a. Merge sort 
+    b. Quick sort 
+    c. radix sort
+
+
+the sorting algos we learned till now dont work fast for more than 20 items 
+1. the family of algo we will learn now reduce the time complexity 
+from O(n2) to O(n logn)
+
+2. there is trade off between efficiency and simplicity 
+3. the more efficient algo are much simpler and generally takes longer to understand 
+
+MERGE SORT 
+1. It is a combination of merging and sorting, acutally 3 things 
+   splitting up, sorting and merging 
+2. It exploits the fact that arrays with 0 or 1 items are always sorted 
+3. Works by decomposing larger arrays into smaller arrrays of 1 or 0 items 
+
+
+Merging sorted arrays 

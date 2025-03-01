@@ -81,8 +81,6 @@ If the input value is equal to the current value, it is upto the logic you have
 Whatever you want to do with the duplicate
 We can also keep a frequency counter to keep track of the duplicates
 
-
-
 FINDING a node in a BST 
 Steps 
 1. Start at the root, check 

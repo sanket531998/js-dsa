@@ -95,7 +95,7 @@ class BinarySearchTree {
   // Tree traversal
   // Breadth first search
   BFS() {
-    var node = this.root,
+    let node = this.root,
       data = [],
       queue = [];
     queue.push(node);

@@ -39,12 +39,12 @@ class SinglyLinkedList {
       current = current.next;
     }
     this.tail = newTail;
-    this.length--;
     this.tail.next = null;
+    this.length--;
 
     if (this.length === 0) {
-      this.head = 0;
-      this.tail = 0;
+      this.head = null;
+      this.tail = null;
     }
     return current;
   }

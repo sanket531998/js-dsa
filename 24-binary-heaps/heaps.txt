@@ -9,7 +9,7 @@ We are focusing on binary heaps and in that there are 2 types
 2. Max heaps 
 
 Objectives
-1. Define a heap 
+1. Define a heap     
 2. Compare min and max heaps 
 3. Implement basic methods on heaps 
 4. Where heaps are used in real world and what other DS can be constructed 
@@ -32,6 +32,63 @@ Objectives
         no guarantees between the siblings nodes 
      4. a binary heap is as compact as possible. all the children of each nodes are as 
         full as they can be and left children are filled out first 
+        and a max binary takes the least amount of space 
+
+   b] Min Binary Heap 
+      1. 
+
+First the left child is added then the right child in binary heaps 
 
 Usage of binary heaps 
-a. Prioroty queues - very commonly used DS 
+a. Prioroty queues - very commonly used DS (binary heaps are used to implement priority queue)
+b. And binary heaps are also used in graph traversal 
+
+
+STORING HEAPS  
+There is an easier way to store binary heaps compared to if we do it like binary search tress
+A list/array 
+
+For any index of an array n
+The left child: 2n + 1
+The right child: 2n + 2
+
+For any node at index of n 
+Its parent is at index (n-1)/2 -> flored 
+
+Inserting/Adding to max binary heaps
+1. Push values to the values property of the heap 
+2. Bubble the value up to its correct spot 
+
+REMOVING from a heap 
+1. Remove the value 
+2. Replace with most recently added
+3. Adjust(sink down)
+
+
+Sink down 
+the procedure for deleting the root of the heap (effectively rermoving 
+the maximum element in max binary heap and the minimum in the 
+min binary heap ) and restoring the properties is called down heap 
+
+
+Priority Queue intro 
+
+1] What is a priority queue?
+   A DS where each element has a priority. 
+   Elements with higher priority are served before elements with lower priority 
+
+Priority queue are seperate from heaps. they are a separate abstract concept 
+
+Naive approach 
+1. Store everything in a list 
+   priority: 3 2 5 8 1
+   then iterate over the entire list to find out the highest priority element 
+2. Insertion and removal have a time complexity of O(log n)  VS the time 
+   complexity of O(n) for the naive approach 
+
+
+In priority queue the main class remains the same but we just keep one more 
+thing that is the node with priority 
+So we have 2 classes 
+1. Priority queue class 
+2. Node class  

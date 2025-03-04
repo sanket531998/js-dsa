@@ -1,0 +1,70 @@
+GRAPHS 
+
+1] Explain what is graph 
+
+  A graph DS consists of a finite (and possibly mutable) set of vertices or nodes 
+  or points, together with a set of unordered pairs of these vertices for an 
+  undirected graph or a set of ordered pairs for a directed graph 
+  Graph is a collection of nodes and connection between the nodes 
+
+Uses of graph 
+  a. Social networks 
+  b. Location/ Mapping - google maps 
+  c. Routing algorithms 
+  d. Visual hierarchy 
+  e. File system optimizations 
+
+Examples 
+  a. people also watches ..... in netflix 
+  b. You might also like 
+  c. People you might know 
+  d. Frequently bought with
+
+
+2] Compare and contrast different types of graphs and their use cases in the real world 
+
+Essential graph terms 
+  a. Vertex: a node 
+  b. Edge: Connection between nodes
+  c. Weighted/unweighted: Values assigned to distance between vertices 
+  d. Directed/undirected: Directions assigned to distanced between vertices 
+
+DIRECTED VS UNDIRECTED GRPAHS 
+
+In a undirected graphs there is no direction to the edges 
+for ex: Facebook friends, if i am friend with vaibhav, vaibhav is also my friend
+        Its a 2 way thing (ignoring fbs celebrity pages etc)
+
+A directed graph is often represented with arrows indicates the direction the 
+polarity of the edge 
+for ex: Instagram, if i follow someone does not mean they follow me, it is not a 2 way thing 
+DIRECTED Grpahs can be either one way direction or both direction 
+
+WEIGHTED GRAPH VS UNWEIGHTED GRAPH 
+
+When we assign values to the edges, it becomes a weighted graph 
+For ex: Google maps => Directed and weighted graphs (for direction and distance)
+
+In general adjacency matrix takes up more space, its  
+
+3] Implement a graph using an adjacency list 
+
+Adjacency matrix and Adjacency list 
+We are using adjacency list. WHY? Mainly because the space it takes up and most of 
+the data in real world tends to lead itself to sparser and/or larger graphs 
+
+If you store graph data in a matrix, try to make sure it is almost full 
+
+a] Adding a vertex 
+  i. Write a method called addVertex, which accpets a name of a vertex 
+  ii. It should add a key to the adjacency list with the name of the vertex and set its value to 
+      be an empty array  
+
+b] Adding an edge
+  i. this function should accpet two vertices
+  ii. the function should find in the adjacency list the key of vertex1 and push to 
+      vertex2 to the array 
+
+4] Traverse through the graph using BFS and DFS   
+
+5] Compare and contrast graph traversal algorithms 

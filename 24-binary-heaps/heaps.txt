@@ -92,3 +92,4 @@ thing that is the node with priority
 So we have 2 classes 
 1. Priority queue class 
 2. Node class  
+

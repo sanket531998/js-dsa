@@ -1,0 +1,99 @@
+hash maps aka hash tables 
+
+1. What is a hash table 
+2. Define a hashing algorithm 
+3. Discuss what makes a good hashing algo 
+4. Understand what happens when collisions happen 
+5. Handling collisions with seperate chaining or linear probing   
+
+
+Hash tables are used to store key-value pairs, they are like arrays 
+but the keys are not ordered 
+
+Unlike arrays, hashtables are fast for 
+1. finding values 
+2. adding new values 
+3. removing values 
+
+Python has dictonaries 
+JS has objects and maps* (objects have some restrictions but are basically hash tables)
+Java, go, scala have maps 
+Rby has hashes 
+
+we have a hash map in every langauge by default but we will still 
+try to build our own 
+
+We will convert (string) keys into valid array indices: Hash functions 
+A function that performs this task is a hash function 
+
+Basic hash function: a function that takes a arbitary data of arbitary 
+size and it will spit a data of fixed size 
+
+A hash function is a one way function, we cannot go from o/p to i/p
+
+
+What makes a good hash function? (not a cryptographically secure one)
+1. Fast (constant time)
+2. Does not cluster outputs at specific indices, but distributes 
+   uniformly 
+3. Deterministic (same input same output)
+
+Using prime numbers in our hash function is always a good idea to make the function 
+collion resistat 
+
+Handling collisions 
+1. Even with a large array and a great hash function, collisions are inevitable 
+
+there are 2 ways to solve this 
+1. Separate chaining 
+   With separate chaining, at each index in our array we store values using a more 
+   sophisticated data structure (array or linked list)
+   This allows us to store multiple key value pairs at the same index 
+
+2. Linear probing 
+   With linear probing, when we find a collision, we search through the array to 
+   find the next empty slot  
+   linear probing means we are storing only 1 thing at a slot 
+
+
+
+We are using separate chaining 
+
+Set/Get 
+
+Set
+1. Accepts a key and a value 
+2. Hashes the key 
+3. Stores the key-value pair in the hash table array via separate chaining 
+
+
+Get
+1. accept a key 
+2. hashes the key 
+3. retrieves the key-value pair in the hash table by looping 
+4. if the key isnt found, return undefined 
+
+
+we have 2 more methods to add in our hash table 
+1. Keys: Loops through the hash table array and returns an array of keys in the table 
+2. Values: Loops through the hash table array and returns an array of values in the table 
+
+
+Big O of hash tables (average case)
+1. Insert : O(1)
+2. Deletion : O(1)
+3. Access : O(1)
+
+
+Worst time complexity: O(n)
+this can happen when the array of 10 slots lets say has all the hash data at 0 index 
+
+
+SUMMARY 
+1. Hash tables are collections of key-value pairs
+2. Hash tables can find values quicklu given a key 
+3. Hash tables can add new ky-values quickly 
+4. Hash tables store data in large array, and work by hashing the keys 
+5. A good hash should be fast, distrubute keys uniformly and be deterministic 
+6. Separate chaining and linear probing are two stratergies used to deal with two keys 
+   that hash to the same index 

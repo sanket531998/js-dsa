@@ -20,7 +20,7 @@ A singly linked list is a very special case of a tree
 
 RULES for a tree
 1. A node can only point to a child. We cannot point to nodes on same level
-   We cannot have a node pointing to a parent or a sibling 
+   We cannot have a node   to a parent or a sibling 
 2. We can have only 1 root 
 
 Terminology 

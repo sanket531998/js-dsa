@@ -65,14 +65,11 @@ Set
 1. Accepts a key and a value 
 2. Hashes the key 
 3. Stores the key-value pair in the hash table array via separate chaining 
-
-
 Get
 1. accept a key 
 2. hashes the key 
 3. retrieves the key-value pair in the hash table by looping 
 4. if the key isnt found, return undefined 
-
 
 we have 2 more methods to add in our hash table 
 1. Keys: Loops through the hash table array and returns an array of keys in the table 
@@ -91,8 +88,8 @@ this can happen when the array of 10 slots lets say has all the hash data at 0 i
 
 SUMMARY 
 1. Hash tables are collections of key-value pairs
-2. Hash tables can find values quicklu given a key 
-3. Hash tables can add new ky-values quickly 
+2. Hash tables can find values quickly given a key 
+3. Hash tables can add new key-values quickly 
 4. Hash tables store data in large array, and work by hashing the keys 
 5. A good hash should be fast, distrubute keys uniformly and be deterministic 
 6. Separate chaining and linear probing are two stratergies used to deal with two keys 

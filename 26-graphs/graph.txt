@@ -15,7 +15,7 @@ Uses of graph
   e. File system optimizations 
 
 Examples 
-  a. people also watches ..... in netflix 
+  a. people also watch ..... in netflix 
   b. You might also like 
   c. People you might know 
   d. Frequently bought with
@@ -27,7 +27,7 @@ Essential graph terms
   a. Vertex: a node 
   b. Edge: Connection between nodes
   c. Weighted/unweighted: Values assigned to distance between vertices 
-  d. Directed/undirected: Directions assigned to distanced between vertices 
+  d. Directed/undirected: Directions assigned to distances between vertices 
 
 DIRECTED VS UNDIRECTED GRPAHS 
 
@@ -45,7 +45,16 @@ WEIGHTED GRAPH VS UNWEIGHTED GRAPH
 When we assign values to the edges, it becomes a weighted graph 
 For ex: Google maps => Directed and weighted graphs (for direction and distance)
 
-In general adjacency matrix takes up more space, its  
+In general adjacency matrix takes up more space, its better to use adjacency list mostly 
+
+Adjacency LIST VS MATRIX 
+LIST: 1) Can take up less space 
+      2) Faster to iterate over all edges 
+      3) Can be slower to lookup specific edge 
+
+MATRIX 1) Can take more space 
+       2) Slower to iterate over all edges 
+       3) Faster to look up specific edge 
 
 3] Implement a graph using an adjacency list 
 
@@ -62,8 +71,12 @@ a] Adding a vertex
 
 b] Adding an edge
   i. this function should accpet two vertices
-  ii. the function should find in the adjacency list the key of vertex1 and push to 
+  ii. the function should find in the adjacency list the key of vertex1 and push
       vertex2 to the array 
+  iii. And the function should find in the adjacency list the key of vertex2 and push   
+      vertex1 to the array 
+
+c] Removing an edge 
 
 4] Traverse through the graph using BFS and DFS   
 

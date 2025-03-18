@@ -1,0 +1,30 @@
+Traversal means Visiting, Updating, Checking each vertex in a graph 
+
+Graph traversal uses 
+1. Peer to peer networking 
+2. Web crawlers
+3. Finding closest matches/recommendations 
+4. Shortest path problems 
+  a. Navigation 
+  b. Solving mazes 
+  c. AI (shortest path to win the game)
+
+
+2] DEPTH FIRST SEARCH - depth first graph traversal 
+
+  in this we priortise going deep in the graph first
+  Its easier on a tree, because we have a direction to go to but in a graph 
+  we can start from anywhere  
+  there is no root node in graph for depth first search 
+
+  we start at a number (0). then lets say we always choose the lowest number as 
+  our next item to visit 
+  DFS: 0 1 5 6 7 8 
+  BFS: 0 1 2 6 5 3 4 
+
+  DFS example 
+  A B C D E F 
+  We have to remember where we have been because we dont want to repeat the path 
+
+  BFS example 
+  A B E C D F

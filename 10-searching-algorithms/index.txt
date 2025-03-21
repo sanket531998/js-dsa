@@ -1,0 +1,22 @@
+JS already has many methods which do searching 
+1. indexOf
+2. includes 
+3. find
+4. findIndex
+
+
+Linear search: We visit one item at a time 
+Big O of the linear search is O(n) because the time complexity grows linearly with the size of the input data.
+Best: O(1)  ||  Worst: O(n)  ||  Average: O(n)
+
+Binary Arrays 
+
+  Binary arrays only work on sorted arrays 
+  Binary search is divide and conquer 
+  Binary search Time complexity 
+  Worst and Average case: O(log n)
+  Best case: O(1)
+
+
+Native string search 
+

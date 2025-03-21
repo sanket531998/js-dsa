@@ -75,7 +75,7 @@ b] Adding an edge
       vertex2 to the array 
   iii. And the function should find in the adjacency list the key of vertex2 and push   
       vertex1 to the array 
-
+ 
 c] Removing an edge 
 
 4] Traverse through the graph using BFS and DFS   

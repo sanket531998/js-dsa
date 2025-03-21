@@ -13,7 +13,7 @@ Graph traversal uses
 2] DEPTH FIRST SEARCH - depth first graph traversal 
 
   in this we priortise going deep in the graph first
-  Its easier on a tree, because we have a direction to go to but in a graph 
+  Its easier on a tree, because we have a direction and root to go to but in a graph 
   we can start from anywhere  
   there is no root node in graph for depth first search 
 
@@ -24,7 +24,22 @@ Graph traversal uses
 
   DFS example 
   A B C D E F 
-  We have to remember where we have been because we dont want to repeat the path 
+  We have to remember where we have been because we dont want to repeat the path and have 
+  duplicate values 
+  DFS in graph: Finding one neighbour and then go to its child before we go to the siblings 
+  of the first node 
+  Idea: We follow a branch down 
 
   BFS example 
   A B E C D F
+
+there are 2 ways for DFS: 
+a) Recursive and
+b) Itterative 
+
+DFS Recursive intro 
+1. there is no start point 
+
+BFS 
+BFS prioritised visiting neighbours at current depth first 
+we will use queue 
